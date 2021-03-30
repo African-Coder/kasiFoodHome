@@ -1,0 +1,41 @@
+{
+  "shops": [
+    {
+      "id": 1,
+      "name":"Campus Food1",
+      "sales": 100,
+      "address": "Soshanguve Campus",
+      "status": "Active"
+    },
+    {
+      "id": 2,
+      "name":"Kasi Foodhub",
+      "sales": 150,
+      "address": "123 Block L Soshanguve",
+      "status": "Active"
+    },
+    {
+      "id": 3,
+      "name":"Kota Queen",
+      "sales": 250,
+      "address": "420 Block L Soshanguve",
+      "status": "Active"
+    }
+  ],
+  "vendor": [
+    {
+      "id": 1,
+      "name": "Kasi Foodhub",
+      "sales": 150,
+      "address": "123 Block L Soshanguve",
+      "status": "Active"
+    },
+    {
+      "id": 2,
+      "name": "Campus Eats",
+      "sales": 100,
+      "address": "Soshanguve Campus",
+      "status": "Active"
+    }
+  ]
+}
