@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController, ToastController } from '@ionic/angular';
+import { AdminServiceService } from 'src/app/services/admin-service.service';
 
 @Component({
   selector: 'app-edit-vendor',
@@ -11,9 +12,14 @@ export class EditVendorPage implements OnInit {
   shop:any;
 
   constructor(private editVendorCtrl: ModalController,
-              private infoToast: ToastController) { }
+              private infoToast: ToastController,
+              private _adminService: AdminServiceService) { }
 
   ngOnInit() {
+
+  this._adminService.updateShop(this.shop)
+  .subscribe(data => this.shop = data);
+
   }
 
   async showToast() {

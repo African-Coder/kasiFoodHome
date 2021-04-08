@@ -31,11 +31,17 @@
   ],
   "vendor": [
     {
-      
       "id": 1,
       "name": "Kasi Kota",
       "sales": 750,
       "address": "1080 Block C Mabopane",
+      "status": "Active"
+    },
+    {
+      "id": 2,
+      "name": "Campus Eats",
+      "sales": 100,
+      "address": "Soshanguve Campus",
       "status": "Active"
     }
   ]

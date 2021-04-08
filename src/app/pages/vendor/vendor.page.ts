@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { AdminServiceService } from 'src/app/services/admin-service.service';
 import { EditVendorPage } from './edit-vendor/edit-vendor.page';
 import { ViewVendorPage } from './view-vendor/view-vendor.page';
 
@@ -13,16 +14,21 @@ export class VendorPage implements OnInit {
   shops = [
     {
       name:"Campus Eats",
-      sales: 100,
+      sales: 1000,
       address: "Soshanguve Campus",
       status: "Active"
     }
 
   ]
 
-  constructor(private modalCtrl : ModalController) { }
+  constructor(private modalCtrl : ModalController,
+              private _adminService: AdminServiceService) { }
 
   ngOnInit() {
+
+    this._adminService.getVendor()
+        .subscribe(data => this.shops = data);
+
   }
 
   async  _openModal(shop) {
