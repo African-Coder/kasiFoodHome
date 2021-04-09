@@ -49,9 +49,9 @@ export class SuperAdminPage implements OnInit {
 
   //toast to confirm deleted item
 
-  async showToast() {
+  async showToast(shop) {
     const toast = await this.infoToast.create({
-      message: 'Item has been deleted',
+      message: shop.name + ' has been deleted',
       duration: 1000
     });
     toast.present();
@@ -64,7 +64,7 @@ export class SuperAdminPage implements OnInit {
     const alert = await this.alertModal.create({
       cssClass: 'my-custom-class',
       header: 'Confirm!',
-      message: '<strong>Are you sure you want to delete this shop ?</strong>',
+      message: '<strong>Are you sure you want to delete ' + shop.name + ' ?</strong>' ,
       buttons: [
         {
           text: 'Cancel',
@@ -86,7 +86,7 @@ export class SuperAdminPage implements OnInit {
           
               // calling toast to show item has been deleted
 
-              this.showToast();
+              this.showToast(shop);
           }
         }
       ]
@@ -94,6 +94,8 @@ export class SuperAdminPage implements OnInit {
 
     await alert.present();
   }
+
+  //opens modal to create page to view shop
 
   async  _openModal(shop) {
 
@@ -107,6 +109,8 @@ export class SuperAdminPage implements OnInit {
     return await modal.present();
 
   }
+
+  //opens modal to edit page to change shop attibutes
 
   async  _editModal(shop) {
 
