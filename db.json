@@ -79,17 +79,17 @@
     },
     {
       "id": 12,
-      "name": "AB and Eunice Foods",
-      "sales": 80,
+      "name": "AB and Eunice Hot Meals",
+      "sales": 419,
       "address": "1 Zone 23 Ga-Rankuwa",
       "status": "Pending"
     },
     {
       "id": 13,
-      "name": "Qwerty Foods",
-      "sales": 3500,
-      "address": "1 Roper Street",
-      "status": "Pending"
+      "name": "Qwerty Digital Eats",
+      "sales": 985,
+      "address": "167 Milner Street Waterkloof",
+      "status": "Active"
     }
   ],
   "vendor": [

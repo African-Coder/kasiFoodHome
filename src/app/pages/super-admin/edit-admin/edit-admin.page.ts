@@ -26,6 +26,7 @@ export class EditAdminPage implements OnInit {
     toast.present();
   }
 
+
   update() {
 
     this._adminService.updateShop(this.shop)

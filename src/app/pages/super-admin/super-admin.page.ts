@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, AlertController, ToastController } from '@ionic/angular';
 import { AdminServiceService } from 'src/app/services/admin-service.service';
 import { EditAdminPage } from './edit-admin/edit-admin.page';
 import { ViewAdminPage } from './view-admin/view-admin.page';
-import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-super-admin',
@@ -34,20 +33,28 @@ export class SuperAdminPage implements OnInit {
 
   constructor(private modalCtrl: ModalController,
               private _adminService: AdminServiceService,
-              private alertModal: AlertController) { }
+              private alertModal: AlertController,
+              private infoToast: ToastController) { }
 
   ngOnInit() {
+
+    //calling service on initial load to show all shops in database
 
      this._adminService.getShops()
         .subscribe(data => this.shops = data);
 
   }
 
-  deleteShop(id) {
-    this._adminService.removeShop(id)
-    .subscribe(data => {
-      console.log(data);
+  
+
+  //toast to confirm deleted item
+
+  async showToast() {
+    const toast = await this.infoToast.create({
+      message: 'Item has been deleted',
+      duration: 1000
     });
+    toast.present();
   }
   
 
@@ -57,25 +64,29 @@ export class SuperAdminPage implements OnInit {
     const alert = await this.alertModal.create({
       cssClass: 'my-custom-class',
       header: 'Confirm!',
-      message: '<strong>Are you sure you want to delete this shop ?</strong>!!!',
+      message: '<strong>Are you sure you want to delete this shop ?</strong>',
       buttons: [
         {
           text: 'Cancel',
           role: 'cancel',
           cssClass: 'secondary',
-          handler: (blah) => {
-            console.log('Confirm Cancel: blah');
+          handler: () => {
+            console.log('Confirm Cancel');
           }
         }, {
           text: 'Okay',
           handler: () => {
+
+              //service called to delete shop
 
               this._adminService.removeShop(shop.id)
               .subscribe(data => {
                 console.log(data);
               });
           
-            console.log('Confirm Okay');
+              // calling toast to show item has been deleted
+
+              this.showToast();
           }
         }
       ]
