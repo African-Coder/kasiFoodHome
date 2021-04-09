@@ -24,14 +24,76 @@
     {
       "id": 4,
       "name": "Kasi Dijo",
-      "sales": 370,
-      "address": "556 Block GG Soshanguve",
+      "sales": 1350,
+      "address": "785 Block L Soshanguve",
+      "status": "Pending"
+    },
+    {
+      "id": 5,
+      "name": "Kota Joe's",
+      "sales": 950,
+      "address": "111 Block GG Soshanguve",
+      "status": "Pending"
+    },
+    {
+      "id": 6,
+      "name": "Dijo tse monate",
+      "sales": 381,
+      "address": "909 Block LKK Soshanguve",
+      "status": "Pending"
+    },
+    {
+      "id": 7,
+      "name": "Thabang's Foods",
+      "sales": 567,
+      "address": "234 Block P Juku-Lane Soshanguve",
+      "status": "Pending"
+    },
+    {
+      "id": 8,
+      "name": "Enoch's Sphatlhos",
+      "sales": 990,
+      "address": "1516 Block RR Soshanguve",
+      "status": "Pending"
+    },
+    {
+      "id": 9,
+      "name": "Metro Food",
+      "sales": 1150,
+      "address": "925 Block U Mabopane",
+      "status": "Pending"
+    },
+    {
+      "id": 10,
+      "name": "Happy Meals",
+      "sales": 503,
+      "address": "1123 Zone 1 Ga-Rankuwa",
+      "status": "Active"
+    },
+    {
+      "id": 11,
+      "name": "Nhlanhla's Hot Meals",
+      "sales": 419,
+      "address": "774 Block WW Soshanguve",
+      "status": "Pending"
+    },
+    {
+      "id": 12,
+      "name": "AB and Eunice Foods",
+      "sales": 80,
+      "address": "1 Zone 23 Ga-Rankuwa",
+      "status": "Pending"
+    },
+    {
+      "id": 13,
+      "name": "Qwerty Foods",
+      "sales": 3500,
+      "address": "1 Roper Street",
       "status": "Pending"
     }
   ],
   "vendor": [
     {
-      
       "id": 1,
       "name": "Kasi Kota",
       "sales": 750,
