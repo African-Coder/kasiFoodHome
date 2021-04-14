@@ -18,10 +18,10 @@ export class EditAdminPage implements OnInit {
   ngOnInit() {
   }
 
-  async showToast() {
+  async showToast(shop) {
     const toast = await this.infoToast.create({
-      message: 'Your settings have been saved',
-      duration: 1000
+      message: 'Your settings have been saved for: ' + shop.name,
+      duration: 1500
     });
     toast.present();
   }

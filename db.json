@@ -61,7 +61,7 @@
       "name": "Metro Food",
       "sales": 1150,
       "address": "925 Block U Mabopane",
-      "status": "Pending"
+      "status": "Active"
     },
     {
       "id": 10,
@@ -82,13 +82,69 @@
       "name": "AB and Eunice Hot Meals",
       "sales": 419,
       "address": "1 Zone 23 Ga-Rankuwa",
-      "status": "Pending"
+      "status": "Active"
     },
     {
       "id": 13,
       "name": "Qwerty Digital Meals",
       "sales": 1715,
       "address": "1023 Zone 2 Ga-Rankuwa",
+      "status": "Pending"
+    },
+    {
+      "id": 14,
+      "name": "Tshepo's Food Court",
+      "sales": 321,
+      "address": "789 Block S Mabopane",
+      "status": "Active"
+    },
+    {
+      "id": 15,
+      "name": "Frank's House of Dumblings",
+      "sales": 15,
+      "address": "555 Block P JukuLane Soshanguve",
+      "status": "Pending"
+    },
+    {
+      "id": 16,
+      "name": "Mabopane Highway Stop",
+      "sales": 85,
+      "address": "423 Soshanguve Block XX",
+      "status": "Pending"
+    },
+    {
+      "id": 17,
+      "name": "Sosh Hot Meals",
+      "sales": 88,
+      "address": "8 Block VV Soshanguve",
+      "status": "Pending"
+    },
+    {
+      "id": 18,
+      "name": "Nice Foods",
+      "sales": 102,
+      "address": "444 Mandela Road SOshanguve",
+      "status": "Pending"
+    },
+    {
+      "id": 19,
+      "name": "The DA Food House",
+      "sales": 447,
+      "address": "721 Block XX Soshanguve",
+      "status": "Pending"
+    },
+    {
+      "id": 20,
+      "name": "ANC YL Food Shop",
+      "sales": 568,
+      "address": "990 Biko Street",
+      "status": "Pending"
+    },
+    {
+      "id": 21,
+      "name": "Everyone's Food Shop",
+      "sales": 567,
+      "address": "777 Tsunami Street Ga-Rankuwa",
       "status": "Pending"
     }
   ],

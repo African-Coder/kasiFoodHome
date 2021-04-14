@@ -52,7 +52,7 @@ export class SuperAdminPage implements OnInit {
   async showToast(shop) {
     const toast = await this.infoToast.create({
       message: shop.name + ' has been deleted',
-      duration: 1000
+      duration: 1500
     });
     toast.present();
   }
