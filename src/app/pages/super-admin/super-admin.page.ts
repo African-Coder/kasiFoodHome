@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ModalController, AlertController, ToastController } from '@ionic/angular';
 import { AdminServiceService } from 'src/app/services/admin-service.service';
 import { EditAdminPage } from './edit-admin/edit-admin.page';
@@ -13,23 +13,7 @@ export class SuperAdminPage implements OnInit {
 
   id: number;
 
-  shops = [
-    {
-      id: 1,
-      name:"Kota Queens",
-      sales: 10,
-      address: "123 Soshanguve Block L",
-      status: "Active"
-    },
-    {
-      id: 2,
-      name:"Campus Eats",
-      sales: 100,
-      address: "Soshanguve Campus",
-      status: "Active"
-    }
-
-  ];
+  restaurants: any [];
 
   constructor(private modalCtrl: ModalController,
               private _adminService: AdminServiceService,
@@ -41,7 +25,7 @@ export class SuperAdminPage implements OnInit {
     //calling service on initial load to show all shops in database
 
      this._adminService.getShops()
-        .subscribe(data => this.shops = data);
+        .subscribe(data => this.restaurants = data);
 
   }
 
@@ -74,7 +58,7 @@ export class SuperAdminPage implements OnInit {
             console.log('Confirm Cancel');
           }
         }, {
-          text: 'Okay',
+          text: 'Yes',
           handler: () => {
 
               //service called to delete shop

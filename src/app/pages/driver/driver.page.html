@@ -1,23 +1,22 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>All Shops</ion-title>
+    <ion-title>All Orders</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let restaurant of restaurants; let i=index">
+    <ion-item *ngFor="let order of orders; let i=index">
       <ion-avatar>
         <!--add click for avatar-->
         <img class="avatar" src="../../assets/images/avatar.png">
         <!--image placed here-->
       </ion-avatar>
       <ion-label>
-        <h4>{{restaurant.restuarant_name}}</h4>
+        <h4>{{order.shop}}</h4>
       </ion-label>
       <ion-icon name="eye" color="success" (click)="_openModal(shop)" slot="end"></ion-icon>
-      <ion-icon name="create" color="danger" slot="end" (click)="_editModal(shop)"></ion-icon>
-      <ion-icon name="trash-outline" slot="end" (click)="presentAlertConfirm(shop)"></ion-icon>
+      <ion-icon name="checkbox" color="black"></ion-icon>
     </ion-item>
   </ion-list>
 </ion-content>

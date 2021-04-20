@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'vendor',
     loadChildren: () => import('./pages/vendor/vendor.module').then( m => m.VendorPageModule)
+  },
+  {
+    path: 'driver',
+    loadChildren: () => import('./pages/driver/driver.module').then( m => m.DriverPageModule)
   }
 ];
 

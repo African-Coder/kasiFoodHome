@@ -8,8 +8,9 @@ import { Observable } from 'rxjs';
 })
 export class AdminServiceService {
 
-  private _urlShop = 'http://localhost:3000/shops';
+  private _urlShop = 'http://localhost:3000/admin';
   private _urlVendor = 'http://localhost:3000/vendor';
+  private _urlOrder = 'http://localhost:3000/order';
 
   constructor(private _http: HttpClient) { }
 
@@ -44,6 +45,12 @@ export class AdminServiceService {
 
   getVendor() {
     return this._http.get<any>(this. _urlVendor);
+  }
+
+  //get orders
+
+  getOrder() {
+    return this._http.get<any>(this._urlOrder);
   }
 
 }
