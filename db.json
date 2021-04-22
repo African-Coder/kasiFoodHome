@@ -5,7 +5,7 @@
       "name": "Kasi Kota",
       "sales": 750,
       "address": "1080 Block C Mabopane",
-      "status": "Pending"
+      "status": "Active"
     },
     {
       "id": 2,
@@ -54,6 +54,13 @@
       "name": "Enoch's Sphatlhos",
       "sales": 990,
       "address": "1516 Block RR Soshanguve",
+      "status": "Active"
+    },
+    {
+      "id": 9,
+      "name": "Metro Food",
+      "sales": 1150,
+      "address": "925 Block U Mabopane",
       "status": "Active"
     },
     {
@@ -132,6 +139,13 @@
       "sales": 568,
       "address": "990 Biko Street",
       "status": "Pending"
+    },
+    {
+      "id": 21,
+      "name": "Everyone's Food Shop",
+      "sales": 567,
+      "address": "777 Tsunami Street Ga-Rankuwa",
+      "status": "Pending"
     }
   ],
   "vendor": [
@@ -141,23 +155,6 @@
       "sales": 750,
       "address": "1080 Block C Mabopane",
       "status": "Active"
-    }
-  ],
-  "Order": [
-    {
-      "id": 1,
-      "shop": "KFC",
-      "desc": "Twister",
-      "dropoff": "785 Block L Soshanguve",
-      "distance": "20 km"
-    },
-    {
-      
-      "id": 2,
-      "shop": "Kasi Kota",
-      "desc": "Cheese burger achaar",
-      "dropoff": "456 Block H Soshanguve",
-      "distance": "25 km"
     }
   ]
 }

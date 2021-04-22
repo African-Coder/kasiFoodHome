@@ -7,10 +7,6 @@ const routes: Routes = [
   {
     path: '',
     component: DriverPage
-  },
-  {
-    path: 'edit-driver',
-    loadChildren: () => import('./edit-driver/edit-driver.module').then( m => m.EditDriverPageModule)
   }
 ];
 

@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>All Orders</ion-title>
+    <ion-title>Driver Order List</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -9,14 +9,13 @@
     <ion-item *ngFor="let order of orders; let i=index">
       <ion-avatar>
         <!--add click for avatar-->
-        <img class="avatar" src="../../assets/images/avatar.png">
+        <img [src]="">
         <!--image placed here-->
       </ion-avatar>
       <ion-label>
-        <h4>{{order.shop}}</h4>
+        <h4>Pickup : {{order.vendor}}</h4>
       </ion-label>
-      <ion-icon name="eye" color="success" (click)="_openModal(shop)" slot="end"></ion-icon>
-      <ion-icon name="checkbox" color="black"></ion-icon>
+      <ion-icon name="car" color="success" (click)="_openModal(order, i)" slot="end"></ion-icon>
     </ion-item>
   </ion-list>
 </ion-content>
