@@ -9,7 +9,7 @@ import { AdminServiceService } from 'src/app/services/admin-service.service';
 })
 export class EditAdminPage implements OnInit {
 
-  shop:any;
+  shopData:any;
 
   constructor(private editAdminCtrl : ModalController,
               private infoToast : ToastController,
@@ -18,9 +18,9 @@ export class EditAdminPage implements OnInit {
   ngOnInit() {
   }
 
-  async showToast(shop) {
+  async showToast(shopData) {
     const toast = await this.infoToast.create({
-      message: 'Your settings have been saved for: ' + shop.name,
+      message: 'Your settings have been saved for: ' + shopData.restuarant_name,
       duration: 1500
     });
     toast.present();
@@ -29,8 +29,8 @@ export class EditAdminPage implements OnInit {
 
   update() {
 
-    this._adminService.updateShop(this.shop)
-        .subscribe(data => this.shop = data);
+    this._adminService.updateShop(this.shopData)
+        .subscribe(data => this.shopData = data);
 
     this.editAdminCtrl.dismiss()
   }

@@ -11,9 +11,8 @@ import { ViewAdminPage } from './view-admin/view-admin.page';
 })
 export class SuperAdminPage implements OnInit {
 
-  id: number;
 
-  restaurants: any [];
+  shopDatas:any = [];
 
   constructor(private modalCtrl: ModalController,
               private _adminService: AdminServiceService,
@@ -25,7 +24,8 @@ export class SuperAdminPage implements OnInit {
     //calling service on initial load to show all shops in database
 
      this._adminService.getShops()
-        .subscribe(data => this.restaurants = data);
+        .subscribe(data => this.shopDatas = data);
+        console.log(this.shopDatas);
 
   }
 
@@ -33,9 +33,9 @@ export class SuperAdminPage implements OnInit {
 
   //toast to confirm deleted item
 
-  async showToast(shop) {
+  async showToast(shopDatas) {
     const toast = await this.infoToast.create({
-      message: shop.name + ' has been deleted',
+      message: shopDatas.name + ' has been deleted',
       duration: 1500
     });
     toast.present();
@@ -44,11 +44,11 @@ export class SuperAdminPage implements OnInit {
 
   //alert to confirm deletion of shop
 
-  async presentAlertConfirm(shop) {
+  async presentAlertConfirm(shopData) {
     const alert = await this.alertModal.create({
       cssClass: 'my-custom-class',
       header: 'Confirm!',
-      message: '<strong>Are you sure you want to delete ' + shop.name + ' ?</strong>' ,
+      message: '<strong>Are you sure you want to delete ' + shopData.restuarant_name + ' ?</strong>' ,
       buttons: [
         {
           text: 'Cancel',
@@ -63,14 +63,14 @@ export class SuperAdminPage implements OnInit {
 
               //service called to delete shop
 
-              this._adminService.removeShop(shop.id)
+              this._adminService.removeShop(shopData.id)
               .subscribe(data => {
                 console.log(data);
               });
           
               // calling toast to show item has been deleted
 
-              this.showToast(shop);
+              this.showToast(shopData);
           }
         }
       ]
@@ -81,12 +81,12 @@ export class SuperAdminPage implements OnInit {
 
   //opens modal to create page to view shop
 
-  async  _openModal(shop) {
+  async  _openModal(shopData) {
 
     const modal = await this.modalCtrl.create({
       component: ViewAdminPage,
       componentProps: {
-        shop: shop
+        shopData: shopData
       }
     });
 
@@ -96,12 +96,12 @@ export class SuperAdminPage implements OnInit {
 
   //opens modal to edit page to change shop attibutes
 
-  async  _editModal(shop) {
+  async  _editModal(shopData) {
 
     const modal = await this.modalCtrl.create({
       component: EditAdminPage,
       componentProps: {
-        shop: shop
+        shopData: shopData
       }
     });
 

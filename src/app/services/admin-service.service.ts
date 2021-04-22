@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class AdminServiceService {
 
-  private _urlShop = 'http://localhost:3000/admin';
+  private _urlShop = 'http://localhost:3000/allrestuarant';
   private _urlVendor = 'http://localhost:3000/vendor';
   private _urlOrder = 'http://localhost:3000/order';
 
@@ -22,19 +22,25 @@ export class AdminServiceService {
 
   //update shops for superadmin
 
-  updateShop(shop:any) {
-    return this._http.put<void>(`${this._urlShop}/${shop.id}`, shop, {
-      headers: new HttpHeaders({
-        'Conent-Type': 'application/json'
-      })
-    })
-  } 
+  updateShop(shopData:any) {
+
+    const id = 123456789;
+
+    console.log( 
+      shopData
+      )
+  
+
+    return this._http.put(`${this._urlShop}/${id}`, shopData);
+
+  }
+
 
   //delete shop for superadmin
 
   removeShop(id:any) {
     // const id: number = 1;
-    const _urldel = 'http://localhost:3000/shops/' + id;
+    const _urldel = 'http://localhost:3000/allrestuarant/' + id;
 
     return this._http.delete(_urldel);
   

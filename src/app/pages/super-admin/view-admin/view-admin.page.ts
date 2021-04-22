@@ -8,7 +8,7 @@ import { ModalController } from '@ionic/angular';
 })
 export class ViewAdminPage implements OnInit {
 
-  shop:any;
+  shopData:any;
 
   constructor(private viewAdminCtrl: ModalController) {
 
@@ -18,7 +18,7 @@ export class ViewAdminPage implements OnInit {
   }
 
   dismiss() {
-    this.viewAdminCtrl.dismiss(this.shop)
+    this.viewAdminCtrl.dismiss(this.shopData)
   }
   
 }

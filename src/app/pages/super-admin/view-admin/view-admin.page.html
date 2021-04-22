@@ -14,22 +14,17 @@
 
   <ion-list>
     <ion-list-header color="tertiary">
-      Summary of {{shop.name}} sales
+      Summary of {{shopData.restuarant_name}} sales
     </ion-list-header>
 
     <ion-item>
       <ion-label>Status of Vendor:</ion-label>
-      <ion-badge color="primary" slot="end">{{shop.status}}</ion-badge>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Meals sold to customers:</ion-label>
-      <ion-badge color="primary" slot="end">{{shop.sales}}</ion-badge>
+      <ion-badge color="primary" slot="end">{{shopData.status}}</ion-badge>
     </ion-item>
 
     <ion-item>
       <ion-label>Premesis address:</ion-label>
-      <ion-badge color="primary" slot="end">{{shop.address}}</ion-badge>
+      <ion-badge color="primary" slot="end">{{shopData.address}}</ion-badge>
     </ion-item>
 
   </ion-list>
