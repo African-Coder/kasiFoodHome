@@ -27,12 +27,17 @@ export class EditAdminPage implements OnInit {
   }
 
 
+
+
   update() {
 
     this._adminService.updateShop(this.shopData)
         .subscribe(data => this.shopData = data);
 
+        //console.log('ID' + this.shopData.value.id);
+
     this.editAdminCtrl.dismiss()
+    
   }
 
 }

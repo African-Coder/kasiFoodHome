@@ -26,12 +26,7 @@ export class AdminServiceService {
 
     const id = 123456789;
 
-    console.log( 
-      shopData
-      )
-  
-
-    return this._http.put(`${this._urlShop}/${id}`, shopData);
+    return this._http.put(`${'http://localhost:3000/restu_update'}/${id}`, shopData);
 
   }
 
