@@ -3,6 +3,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 //import { IShop } from 'src/app/services/shop';
 
+const httpOptions = {
+  headers: new HttpHeaders({ 
+    'Access-Control-Allow-Origin':'http://localhost:3000',
+    'Access-Control-Allow-Methods': 'PUT'
+  })
+};
+
 @Injectable({
   providedIn: 'root'
 })
@@ -26,7 +33,8 @@ export class AdminServiceService {
 
     const id = 123456789;
 
-    return this._http.put(`${'http://localhost:3000/restu_update'}/${id}`, shopData);
+    return this._http.put(`${'http://localhost:3000/restu_update'}/${shopData.restuarant_id}`, shopData, httpOptions);
+    //return this._http.put(`http://localhost:3000/restu_update/${id}`, shopData, httpOptions);
 
   }
 

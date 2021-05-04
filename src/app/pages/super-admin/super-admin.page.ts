@@ -35,7 +35,7 @@ export class SuperAdminPage implements OnInit {
 
   async showToast(shopDatas) {
     const toast = await this.infoToast.create({
-      message: shopDatas.name + ' has been deleted',
+      message: shopDatas.restuarant_name + ' has been deleted',
       duration: 1500
     });
     toast.present();

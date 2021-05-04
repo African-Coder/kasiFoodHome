@@ -34,7 +34,7 @@ export class EditAdminPage implements OnInit {
     this._adminService.updateShop(this.shopData)
         .subscribe(data => this.shopData = data);
 
-        //console.log('ID' + this.shopData.value.id);
+        console.log('ID ' + this.shopData.restuarant_id);
 
     this.editAdminCtrl.dismiss()
     
